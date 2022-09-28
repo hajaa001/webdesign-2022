@@ -1,0 +1,54 @@
+html,body{
+margin: 0;
+padding: 0;
+}
+
+.title{
+  font-size: xx-large;
+}
+
+
+.flex-container{
+ display: flex;
+ flex-direction: row;
+ background-color: dodgerblue;
+}
+
+/*.meny1{
+
+margin: 10px;
+}*/
+
+.bilde1{
+padding: 10px;
+margin: 20px;
+background-color: #f1f1f1;
+
+
+}
+
+.bilde2{
+padding: 10px;
+margin: 20px;
+background-color: #f1f1f1;
+
+
+
+}  
+
+.bilde3{
+padding: 10px;
+margin: 20px;
+background-color: #f1f1f1;
+
+
+}
+
+.bilde4{
+padding: 10px;
+margin: 20px;
+background-color: #f1f1f1;
+
+
+     border-image-width: 100em;
+}
