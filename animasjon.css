@@ -1,0 +1,47 @@
+@keyframes test{
+from {background-color: red;}
+to {background-color: yellow;}
+}
+
+
+@keyframes testanigma{
+0% {background-color: red;}
+25% {background-color:yellow;}
+50% {background-color: blue;}
+100% {background-color: green;}
+}
+
+@keyframes test-anubis{
+0% {background-color: red; left: 0px; top: 0px;}
+25% {background-color: yellow; left: 200px; top: 0px;}
+50% {background-color: blue; left: 200px; top: 200px;}
+100% {background-color: green; left: 0px; top: 0px;}
+}
+
+
+.animasjonen {
+width: 100px;
+height: 100px;
+background-color: red;
+animation-name: test;
+animation-duration: 4s;
+padding: 400px;
+}
+.anigma{
+width: 100px;
+height: 100px;
+background-color: red;
+animation-name: testanigma;
+animation-duration: 4s;
+padding: 400px;
+margin: 100px;
+}
+
+.anubis{
+width: 100px;
+height: 100px;
+position: relative;
+animation-name: test-anubis;
+animation-duration: 4s;
+padding: 400px;
+}
