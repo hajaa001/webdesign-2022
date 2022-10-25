@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    .gull {
+        background-color: yellow;
+    }
+</style>
+
+</head>
+<body>
+   <h1></h1> 
+   <p class="gull">Kuben Videregående</p>
+   <button onclick="gulltoblue()">byttfarge</button>
+   <script>
+   var overskirftel = document.querySelector("h1")
+   overskirftel.innerHTML= " kom aldri senp på Skole";
+  
+    for (var i = 0 ; i <10 ; i++){
+        console.log(i);
+    }
+
+   function gulltoblue(){
+    var avsnittel = document.querySelector(".gull");
+    avsnittel.style.backgroundColor = "blue";
+   }
+
+
+
+
+   </script>
+</body>
+</html>
