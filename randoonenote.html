@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .kant { border: 3px;}
+         rosa{
+            background-color: rosybrown;}
+            violet{
+                background-color: blueviolet;  
+            }
+    </style>
+ 
+</head>
+<body>
+<button onClick="okerListen()"> Øker listen </button>
+<br/><br/>
+<ul id="listmitt">
+    
+</ul>
+    
+    <script>
+        var teller= 0;
+        function okerListen() {
+        var listeEl= document.getElementById("listmitt");
+        //Css-klassen til 3px
+        listeEl.className ="kant";
+        //Legg til teksten til Html
+        listeEl.innerHTML += "<li> Liste " + teller + "</li>";
+        teller++;
+        if(listeEl < oddetall){
+            listmitt.innerHTML.classname = "rosa";
+        
+        }
+        else if(listeEl < partall) {
+            listmitt.innerHTML.classname = "violet";
+        }
+        
+        
+        
+        
+        
+    }
+        </script>
+        
+</body>
+</html>
