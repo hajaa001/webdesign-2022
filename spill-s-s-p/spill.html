@@ -36,39 +36,39 @@ p {
  <p id="maskinPoeng"><b>Maskin:</b>0</p>
 
  <img src="rock.png" width="200" height="200" 
- alt="Spiller rock". id="rock">
+ alt="Spiller rock" id="rock">
 
- <img src="scissors.jpg" width="200" height="200" 
- alt="Spiller scissors". id="scissors">
+ <img src="scissors.png" width="200" height="200" 
+ alt="Spiller scissors" id="scissors">
 
 
  <img src="paper.png" width="200" height="200" 
- alt="Spiller paper". id="paper">
+ alt="Spiller paper" id="paper">
 
 
- <img src="maskin.jpg" width="200" height="200" 
- alt="maskinens valg". id="maskin">
+ <img src="maskin.png" width="200" height="200" 
+ alt="maskinens valg" id="maskin">
 
-
+<p id="info"></p>
 </div>
 
 <script>
 
-var VINNERSUM = 0;
+var VINNERSUM = 5;
 
-var SpilllerPoeng = 0;
+var spillerPoeng = 0;
 
 var maskinPoeng = 0;
 
-var spillerPoengEl = document.querySelector("spillerPoeng");
-var maskinPoengEl = document.querySelector("maskingPoeng");
+var spillerPoengEl = document.querySelector("#spillerPoeng");
+var maskinPoengEl = document.querySelector("#maskinPoeng");
 var infoEl = document.querySelector("#info");
 
 
-var rockEl = document.querySelector("rock");
-var scissorsEl = document.querySelector("scissors");
-var paperEl = document.querySelector("paper");
-var maskinEl = document.querySelector("maskin");
+var rockEl = document.querySelector("#rock");
+var scissorsEl = document.querySelector("#scissors");
+var paperEl = document.querySelector("#paper");
+var maskinEl = document.querySelector("#maskin");
 
 rockEl.addEventListener("click", sjekkResultat);
 scissorsEl.addEventListener("click", sjekkResultat);
@@ -79,14 +79,14 @@ infoEl.innerHTML = "velg stein saks eller papir. Førstemann til" + VINNERSUM + 
 
 function sjekkResultat (e) {
     console.log("Du klikket på et bilde.")
-}
+
 
 var spillerValg = e.target.id;
 
 console.log("Spiller valgte:" + spillerValg);
 
 var tilfeldig = Math.floor(Math.random() * 3) + 1;
-var maskinvalg;
+var maskinValg;
 
 if (tilfeldig === 1) {
     maskinValg = "rock";
@@ -98,12 +98,12 @@ if (tilfeldig === 1) {
 
 console.log("Maskinen Valgte: " + maskinValg);
 
-maskinEl.arc ="bilder/maskin_" + maskinValg + "png";
+maskinEl.src="  " + maskinValg + ".png";
 
 if (spillerValg === maskinValg) {
     // ingen vant.gjør ingenting
-} else if (spillerValg === "stein") {
-  if (spillerValg === "scissors") {
+} else if (spillerValg === "rock") {
+  if (maskinValg === "scissors") {
     // Spiller vant
     spillerPoeng++;
 } else if (maskinValg === "paper") {
@@ -119,7 +119,7 @@ maskinPoeng++;
     // maskin vant
     maskinPoeng++;
 }
-} else if (spillerValg === "papir") {
+} else if (spillerValg ==="paper") {
     if (maskinValg === "rock") {
         // spiller vant
         spillerPoeng++;
@@ -130,17 +130,17 @@ maskinPoeng++;
 }
 }
 
-spillerPoengEl.innerHTML = "<b>spiller: </b>" + spillerPoeng;
-maskinPoengEl.innerHTML = "<b>maskin: </b>" + maskinPoeng;
+spillerPoengEl.innerHTML = "<b> spiller: </b>" + spillerPoeng;
+maskinPoengEl.innerHTML = "<b> maskin: </b>" + maskinPoeng;
 
 if (spillerPoeng ===  VINNERSUM || maskinPoeng === VINNERSUM) {
     rockEl.removeEventListener("click", sjekkResultat);
     scissorsEl.removeEventListener("click", sjekkResultat);
     paperEl.removeEventListener("click", sjekkResultat);
 
-   rockEl,style.cursor = "auto";
-   scissorsEl,style.cursor = "auto";
-   paperEl,style.cursor = "auto";
+   rockEl.style.cursor = "auto";
+   scissorsEl.style.cursor = "auto";
+   paperEl.style.cursor = "auto";
 
    if (spillerPoeng === VINNERSUM) {
     infoEl.innerHTML === "Gratulerer! du vant !";
@@ -149,7 +149,7 @@ if (spillerPoeng ===  VINNERSUM || maskinPoeng === VINNERSUM) {
    }
 
 }
-
+}
 
 </script>
 
