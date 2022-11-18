@@ -54,6 +54,7 @@ p {
 
 <script>
 
+
 var VINNERSUM = 5;
 
 var spillerPoeng = 0;
@@ -73,6 +74,7 @@ var maskinEl = document.querySelector("#maskin");
 rockEl.addEventListener("click", sjekkResultat);
 scissorsEl.addEventListener("click", sjekkResultat);
 paperEl.addEventListener("click", sjekkResultat);
+
 
 
 infoEl.innerHTML = "velg stein saks eller papir. Førstemann til" + VINNERSUM + " Poeng Vinner Spillet."
@@ -98,7 +100,11 @@ if (tilfeldig === 1) {
 
 console.log("Maskinen Valgte: " + maskinValg);
 
-maskinEl.src="  " + maskinValg + ".png";
+function tibakestillmaskin() {
+    maskinEl.src = "maskin.png";
+    
+}
+maskinEl.src="" + maskinValg + ".png";
 
 if (spillerValg === maskinValg) {
     // ingen vant.gjør ingenting
@@ -126,9 +132,11 @@ maskinPoeng++;
     
 } else if(maskinValg === "scissors") {
     // maskin vant
-    maskinPoeng++;
+   maskinPoeng++;
+ 
 }
 }
+setTimeout(tibakestillmaskin, 1500);
 
 spillerPoengEl.innerHTML = "<b> spiller: </b>" + spillerPoeng;
 maskinPoengEl.innerHTML = "<b> maskin: </b>" + maskinPoeng;
@@ -144,11 +152,12 @@ if (spillerPoeng ===  VINNERSUM || maskinPoeng === VINNERSUM) {
 
    if (spillerPoeng === VINNERSUM) {
     infoEl.innerHTML === "Gratulerer! du vant !";
-   } else {
+   
+} else {
     infoEl.innerHTML = "Auda! du ble slått av en maskin...";
    }
-
 }
+
 }
 
 </script>
