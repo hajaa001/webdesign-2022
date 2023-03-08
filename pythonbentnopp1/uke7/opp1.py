@@ -1,1 +1,5 @@
-a = int(input("skriv in et navn: "))
+a = float(input("skriv in et tall: "))
+b = float(input("skriv in et tall: "))
+
+c=a+b
+print(c)
